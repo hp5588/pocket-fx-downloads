@@ -1,5 +1,9 @@
 # 第三方素材与许可
 
+## 应用图标
+
+Android 启动图标采用以 ChatGPT 生成的双币史莱姆设计为基础的图像。
+
 ## 旗帜
 
 应用使用 [Flagpedia](https://flagpedia.net/about) 的 Flagcdn 图片辅助识别币种。Flagpedia 将其提供的旗帜图片标为公有领域。
