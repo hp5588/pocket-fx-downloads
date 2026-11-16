@@ -6,10 +6,13 @@
 
 - 自定义币种列表和顺序，从任一已显示的币种开始换算。
 - 支持基本算式、中文金额读数和可移动的应用内悬浮卡。
+- 可保存、编辑和删除常用金额，支持绑定币种或作为通用数字；调用时保持当前换算设置。
 - 提供碧绿、天蓝、樱粉和琉白四套配色，可选浅色、深色或跟随系统。
 - 通过 Frankfurter 获取每日参考汇率。换算结果仅供参考。
 
 ## 下载与更新
+
+当前正式版：[口袋汇率 0.3.4](https://github.com/hp5588/pocket-fx-downloads/releases/tag/v0.3.4)。
 
 正式安装包会在 [GitHub Releases](https://github.com/hp5588/pocket-fx-downloads/releases) 发布。发布后，在对应版本的 **Assets** 中下载 `pocket-fx-版本号.apk`，用 Android 手机打开并按系统提示安装。
 
