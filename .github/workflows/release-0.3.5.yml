@@ -1,0 +1,31 @@
+name: Publish Pocket FX 0.3.5
+on:
+  push:
+    branches: [main]
+    paths: ['release/v0.3.5.json']
+permissions:
+  contents: write
+concurrency:
+  group: pocket-fx-public-release-0.3.5
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.repository == 'hp5588/pocket-fx-downloads' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Select Android verification tools
+        run: |
+          set -euo pipefail
+          echo "JAVA_HOME=$JAVA_HOME_17_X64" >> "$GITHUB_ENV"
+          echo "$JAVA_HOME_17_X64/bin" >> "$GITHUB_PATH"
+          if [ ! -x "$ANDROID_HOME/build-tools/35.0.0/apksigner" ]; then
+            timeout -k 5s 180s sdkmanager 'build-tools;35.0.0'
+          fi
+      - name: Verify the existing signed APK and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/publish_verified_release_035.py

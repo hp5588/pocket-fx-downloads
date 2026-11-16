@@ -1,0 +1,10 @@
+{
+  "version": "0.3.5",
+  "version_code": 14,
+  "tag": "v0.3.5",
+  "apk_name": "pocket-fx-0.3.5.apk",
+  "apk_sha256": "ed7a3e601ce3586c1d4c5482ac343b1ed941d3265da539a3f90f53fb26675a0d",
+  "apk_bytes": 1893709,
+  "apk_blob_sha": "cb955936e458285cc94e8e39f6d3b55dbcfac007",
+  "certificate_sha256": "f73bf7758e50b986a325c0409ae76f815184f58db8f79ca39d13af0cccf63f08"
+}
